@@ -1,0 +1,44 @@
+<div id="bg">
+    <div id="s"></div>
+    <div id="b"></div>
+
+</div>
+
+
+<style>
+    body {
+        background: #291462;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #bg {
+        width: 100px;
+        height: 100PX;
+        background: #FFF1C1;
+        /*clip-path: polygon(50% 0%, 0% 100%, 100% 100%);*/
+        clip-path: circle(50px at center);
+    }
+    
+    #s {
+        width: 30px;
+        height: 30PX;
+        background: #FE5F55;
+        position: relative;
+        top: 70px;
+        left: 1px;
+        transform: rotate(45deg);
+    }
+    
+    #b {
+        width: 80px;
+        height: 80PX;
+        background: #FE5F55;
+        position: relative;
+        top: 15px;
+        left: 30px;
+        transform: rotate(45deg);
+    }
+</style>

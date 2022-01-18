@@ -1,0 +1,27 @@
+    html {
+        background: transparent;
+    }
+    
+    .panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #f55;
+        height: 50vh;
+        width: 50vh;
+        background-color: aquamarine;
+        /*transform: perspective(400px) rotateY(45deg);*/
+        transform: skew(30deg, 30deg);
+        animation: roll 5s infinite;
+        transform: rotate(360deg);
+        border-radius: 40%
+    }
+    
+    @keyframes roll {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }

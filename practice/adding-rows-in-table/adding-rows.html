@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding ROws</title>
+</head>
+
+<body>
+    <p>Adding rows</p>
+    <table id="tableRow" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell1</td>
+        </tr>
+        <tr>
+            <td>Row2 cell2</td>
+            <td>Row2 cell2</td>
+        </tr>
+
+    </table>
+    <br/>
+    <input type="button" value="Add Row" onclick="addRow()" />
+    <script>
+        function addRow() {
+            var x = document.getElementById('tableRow').insertRow(0);
+
+            var y = x.insertCell(0);
+            var z = x.insertCell(1);
+            y.innerHTML = "Row Added";
+            z.innerHTML = "Row Added";
+            x.style.color = "red";
+            x.style.background = 'purple';
+            x.style.fontSize = "25px";
+
+
+        }
+    </script>
+
+    <p>Editing columns</p>
+    <table id="changing-column" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell1</td>
+        </tr>
+        <tr>
+            <td>Row2 cell2</td>
+            <td>Row2 cell2</td>
+        </tr>
+
+    </table>
+    <input type="button" value="Add Row" onclick="changeContent()" />
+    <script>
+        function changeContent() {
+            rn = window.prompt("Row number", "0");
+            cn = window.prompt("Column number", "0");
+            content = window.prompt("Input cell content");
+            x = document.getElementById("changing-column").rows[parseInt(rn, 10)].cells;
+            x[parseInt(cn, 10)].innerHTML = content;
+        }
+    </script>
+
+    <p>Adding name on page</p>
+    <button id="A">PRESS HERE</button>
+    <H3 id="print"></H3>
+
+    <script>
+        const buttonA = document.querySelector('#A');
+        const toPrint = document.querySelector('#print');
+
+        buttonA.onclick = function() {
+            let name = prompt('what is your name');
+            alert('Hello ' + name + ', nice to see you!');
+            toPrint.textContent = 'Welcome ' + name;
+            toPrint.innerHTML = 'your are welcome ' + name;
+
+        }
+    </script>
+
+
+    <p>printing an array</p>
+    <button id="button1" onclick="showArray()">Dog Name</button>
+    <h1 id="printing"></h1>
+
+    <script>
+        let dog = {
+            name: 'spot',
+            breed: 'Dalmatian'
+        };
+
+        function showArray() {
+
+            const showname = document.querySelector('#printing');
+            showname.textContent = dog.breed;
+        }
+    </script>
+</body>
+
+</html>

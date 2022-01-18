@@ -1,0 +1,65 @@
+<div class="layer">
+    <div id="c1"></div>
+</div>
+
+<div class="layer">
+    <div id="container">
+        <div id="c2"></div>
+        <div id="c3"></div>
+    </div>
+</div>
+
+
+
+<style>
+    body {
+        background: blue;
+    }
+    
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #c1 {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        border-radius: 75px;
+        background: green;
+        left: 20px;
+    }
+    
+    #c2 {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        border-radius: 75px;
+        background: purple;
+        left: 20px;
+    }
+    
+    #c3 {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        border-radius: 75px;
+        background: blue;
+        top: -100px;
+        left: 80px;
+    }
+    
+    #container {
+        height: 100px;
+        width: 100px;
+        left: -60px;
+        position: relative;
+        clip-path: circle(65px at center);
+    }
+</style>
